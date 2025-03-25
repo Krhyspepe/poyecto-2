@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxjwp6wli6ptw"]
+
+[ext_resource type="Texture2D" uid="uid://g78bwhfryakf" path="res://images.jpg" id="1_gwobr"]
+[ext_resource type="Texture2D" uid="uid://dkabso17aj36q" path="res://4e4f3e3dd16bc08db85531b0294138b7.jpg" id="2_ctqy6"]
+[ext_resource type="Texture2D" uid="uid://b24repcyvtaii" path="res://cloud-computing-cyber-circuit-future-technology-concept-background-vector.jpg" id="3_01jvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_busa6"]
+size = Vector2(24, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbo4n"]
+size = Vector2(24, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1mwh"]
+size = Vector2(800, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2ep"]
+size = Vector2(832, 24)
+
+[node name="Principal" type="Node2D"]
+
+[node name="FONDO" type="Sprite2D" parent="."]
+position = Vector2(416.5, 224)
+scale = Vector2(2.61321, 3.62264)
+texture = ExtResource("1_gwobr")
+
+[node name="PARED IZQUIERDA" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="PARED IZQUIERDA"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PARED IZQUIERDA"]
+position = Vector2(4, 256)
+shape = SubResource("RectangleShape2D_busa6")
+
+[node name="PARED DERECHA" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="PARED DERECHA"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PARED DERECHA"]
+position = Vector2(828, 256)
+shape = SubResource("RectangleShape2D_pbo4n")
+
+[node name="Suelo" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Suelo"]
+position = Vector2(416, 504)
+scale = Vector2(1.25, 0.0178571)
+texture = ExtResource("2_ctqy6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
+position = Vector2(416, 504)
+shape = SubResource("RectangleShape2D_s1mwh")
+
+[node name="cielo?" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="cielo?"]
+position = Vector2(424, 12)
+scale = Vector2(0.549538, 0.0244898)
+texture = ExtResource("3_01jvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cielo?"]
+position = Vector2(424, 12)
+shape = SubResource("RectangleShape2D_8h2ep")
