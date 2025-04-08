@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3jredytab5yv"]
+
+[ext_resource type="Texture2D" uid="uid://dnjhichvxjitw" path="res://ball-306820_1280.webp" id="2_1hc30"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8ltc"]
+radius = 640.007
+
+[node name="Pelota" type="CharacterBody2D"]
+position = Vector2(566, 320)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.077539, 0.0639928)
+texture = ExtResource("2_1hc30")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.077539, 0.0639928)
+shape = SubResource("CircleShape2D_g8ltc")
